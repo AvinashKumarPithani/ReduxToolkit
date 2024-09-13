@@ -10,7 +10,7 @@ function AddTodo() {
   const addTodoHandler = (e) => {
     e.preventDefault()
 
-    dispatch(addTodo(input))
+    input ? dispatch(addTodo(input)) : alert('Add valid task to do')
     setInput('')
   }
   return (
